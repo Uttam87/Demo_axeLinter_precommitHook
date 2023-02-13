@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html id='fail1' lang=''>
+​
+    <title>html-has-lang test</title>
+​
+<!--area-alt-->
+<map>
+<area href='#' id='fail' />
+  <area href='#' id='area-altfail2'  />
+  <area href='#' id='area-altfail3' aria-labelledby='nomatchy' />
+  <area href='#' id='area-altfailn4' aria-labelledby='' />
+</map>
+<!--arai-allowed-attr-->  
+<div role='alert' aria-selected='true' id='arai-allowed-attr1'></div>
+<div role='link' aria-selected='true' id='arai-allowed-attr2'></div>
+<div role='row' aria-colcount='value' id='arai-allowed-attr3'></div>
+<div role='row' aria-rowcount='value' id='arai-allowed-attr4'></div>
+<div role='caption' aria-label='value' id='arai-allowed-attr5'></div>
+<div role='switch' aria-label='value' id='arai-allowed-attr5'></div>
+<input role='caption' aria-label='value' id='arai-allowed-attr5' name="switch" checked="checked" aria-checked="false"></div>
+​
+​
+<!--aria-allowed-role-->
+<input type='image' id='fail-input-image-invalid-role' role='doc-afterword' />
+<input type='image' id='fail-input-image-invalid-role' role='doc-afterword'/>
+<button id='fail-button-role-cell' role='cell'></button>
+<input role='switch' aria-label='value' id='arai-allowed-attr5' name="switch" checked="checked" aria-checked="false"></div>
+​
+<!--arai-command-name-->
+<div id='fail1' role='link'></div>
+<div id='fail2' role='link' aria-labelledby='non-existant'></div>
+<div id='fail3' role='link' aria-labelledby='div-empty'></div>
+​
+<!--aria-dialog-name-->
+<div id='dialogfail1' role='dialog'></div>
+<div id='dialogfail2' role='dialog' aria-labelledby='non-existent'></div>
+<dialog id='dialogfail3' open role='alertdialog'></dialog>
+​
+<!--arai-inputfieldname-->
+<div id='inputfieldfail1' aria-label=' ' role='combobox'>England</div>
+<div id='inpurfieldfail2' aria-labelledby='non-existing' role='combobox'>England</div>
+<label>
+  first name
+  <div id='labelfail3\1' role='textbox'></div>
+</label>
+<label for='labelfail2'>first name</label>
+<div role='textbox' id='labelfail3'></div>
+​
+<!--aria-meter-name-->
+<div id='meterfail1' role='meter'>CPU usage</div>
+<div id='meterfail2' role='meter'></div>
+<div id='meterfail3' role='meter' aria-labelledby='usage-non-existant'></div>
+<div id='meterfail4' role='meter' aria-labelledby='usage-empty'></div>
+​
+<!--aria-progressbar-name-->
+<div id='progressbarfail1' role='progressbar'>loading, please wait</div>
+<div id='progressbarfail2' role='progressbar'></div>
+<div id='progressbarfail3' role='progressbar' aria-labelledby='loading-non-existant'></div>
+<div id='progressbarfail4' role='progressbar' aria-labelledby='loading-empty'></div>
+​
+<!--aria-required-attr-->
+<div role='scrollbar' id='violation1'>fail</div>
+<div role='slider' id='violation2'>fail</div>
+<div role='heading' id='violation3'>fail</div>
+<div role='combobox' id='violation4'>fail</div>
+​
+<!--aria-roles-->
+<div role='command' id='aria-rolesfail1'>fail</div>
+  <div role='composite' id='aria-rolesfail2'>fail</div>
+  <div role='input' id='aria-rolesfail3'>fail</div>
+  <div role='landmark' id='aria-rolesfail4'>fail</div>
+  <div role='range' id='aria-rolesfail5'>fail</div>
+  <div role='roletype' id='aria-rolesfail6'>fail</div>
+  <div role='section' id='aria-rolesfail7'>fail</div>
+  <div role='sectionhead' id='aria-rolesfail8'>fail</div>
+  <div role='select' id='aria-rolesfail9'>fail</div>
+  <div role='structure' id='aria-rolesfail10'>fail</div>
+  <div role='widget' id='aria-rolesfail11'>fail</div>
+  <div role='window' id='aria-rolesfail12'>fail</div>
+   
+ <!--aria-toggle-field-name-->
+ <div id='toggle-fieldfail1' role='checkbox' aria-labelledby='does-not-exist'></div>
+ <ul role='menu'>
+  <li id='toggle-fieldfail2' role='menuitemcheckbox' aria-checked='true'></li>
+ </ul>
+ <ul role='menu'>
+  <li id='toggle-fieldfail3' role='menuitemradio' aria-checked='true'></li>
+ </ul>
+ <div role='radiogroup'>
+    <div id='toggle-fieldfail4' role='radio' aria-checked='false' tabindex='0'></div>
+ </div>
+​
+ <!--aria-tooltip-name-->
+ <div id='tooltip-namefail1' role='tooltip'></div>
+<div id='tooltip-namefail2' role='tooltip' aria-labelledby='copy-non-existant'></div>
+<div id='tooltip-namefail3' role='tooltip' aria-labelledby='copy-empty'></div>
+​
+<!--aria-treeitem-name-->
+<div role='tree'>
+    <div id='treeitemfail1' role='treeitem'></div>
+    <div id='treeitemfail2' role='treeitem' aria-labelledby='item-non-existant'></div>
+    <div id='treeitemfail3' role='treeitem' aria-labelledby='item-empty'></div>
+  </div>
+​
+ <!--aria-valid-attr-value--> 
+ <div>
+  <div aria-atomic="blah" id="violation3">hi</div>
+​
+  <div aria-autocomplete="stuff" id="violation4">none</div>
+​
+  <div aria-busy="blah" id="violation5">hi</div>
+    <div id="violation44-ref" hidden>Error message 1</div>
+  </div>
+ <!--aria-valid-attr-->
+ <div>
+    <div aria-cat='maybe' id='aria-valid-attr1'></div>
+    <div aria-bat='no' id='aria-valid-attr2'></div>
+    <div aria-fat='a lil bit' id='aria-valid-attr3'></div>
+    <div aria-rat='ew' id='aria-valid-attr4'></div>
+    <div aria-pat='ok' id='aria-valid-attr5'></div>
+    <div aria-hat='plz' id='aria-valid-attr6'></div>
+    <div aria-sat='or sun' id='aria-valid-attr7'></div>
+    <div aria-mat='lie' id='aria-valid-attr8'></div>
+  </div>
+ <!--autocomplete-valid-->
+ <input autocomplete='work photo' id='autocompletefail1' />
+<input autocomplete='work shipping email' id='autocompletefail2' />
+  <input autocomplete='work,email' id='autocompletefail3' />
+ 
+  <!--button-name-->
+  <button id='button-namefail1' role='presentation'></button>
+  <button id='button-namefail2' role='none'></button>
+  <button id='button-namefail3' role='img' disabled></button>
+  <button id='button-namefail4' role='gridcell'></button>
+​
+ <!--frame-title-->
+ <iframe
+ src='/integration/rules/frame-title/frames/level1.html'
+ id='frame-titlefail'></iframe>
+​
+ <!--html-has-lang-->
+<html id='has-langfail'>
+  <head>
+    <title>html-has-lang test</title>
+ <!--image-alt-->
+ <img src='img.jpg' id='iamge-altviolation' alt=' ' />
+ <img src='' />
+​
+ <!--input-button-name-->
+ <input type='button' id='input-buttonfail1' />
+ <input type='button' id='input-buttonfail2' role='img' disabled />
+  <input type='button' id='input-buttonfail3' role='gridcell' />
+​
+ <!--input-image-alt-->
+ <input type='image' src='img.jpg' id='input-imagefail1' role='img' disabled />
+ <input type='image' src='img.jpg' id='input-imagefail2' role='gridcell' />
+ <!--label-->
+ <label><input type='text' /></label>
+  <label><textarea id='labelfail2'></textarea></label>
+ <!--link-name-->
+ <a href='#' id='link-nameviolation1'></a>
+ <a href='#' id='link-nameviolation2' aria-labelledby='nonexistent'></a>
+ <!--List-->
+ <div role="list">
+  <div role="group">
+    <div role="listitem">list item</div>
+  </div>
+</div>
+ <!--meta-refresh-->
+ <meta id='meta-refreshfail' http-equiv='refresh' content='3000' />
+ <!--meta-viewport-->
+ <meta
+ name='viewport'
+ id='mvp'
+ content='User-Scalable= no;
+                                        maximum-scale=2;'
+/>
+ <!--nested-interactive-->
+ <div role='radio' id='netsted-interactivefail1'>
+    <button aria-hidden='true' tabindex='-1'>not really hidden</button>
+  </div>
+  <div role='tab' id='netsted-interactivefail2'>
+    <button id='pass9'>div fails, button passes</button>
+  </div>
+ <!--object-alt-->
+ <object
+ id='object-altfail1'
+ role='presentation'
+ tabindex='0'
+ data='data:text/html,Object%20content'
+></object>
+<object
+ id='object-altfail2'
+ role='none'
+ aria-live='assertive'
+ data='data:text/html,Object%20content'
+></object>
+ <!--role-img-alt-->
+ <div role='img' id='role-imgviolation1'></div>
+ <div role='img' aria-label='' id='role-imgviolation2'></div>
+ <div role='img' alt='blah' id='role-imgviolation3'></div>
+ <!--select-name-->
+ <label><select ></select></label>
+ <label for='select-namefail3'>
+   <select id='select-namefail3'>
+     <option>Thing</option>
+   </select>
+ </label>
+ <div
+  role="presentation"
+  aria-roledescription="my presentation"
+  id="fail3"
+></div>
+ <!--svg-img-alt-->
+ <svg id="violation" xmlns="http://www.w3.org/2000/svg" role="graphics-document" width="100" height="100"></svg>
+  
+  <svg xmlns='http://www.w3.org/2000/svg' role='img' id='svg-imgviolation2'>
+    <title></title>
+    <circle cx='50' cy='50' r='40' fill='yellow'></circle>
+  </svg>
+  <p aria-roledescription="my paragraph" id="fail1">paragraph</p>
+ <!--tabindex-->
+ <p tabindex='-1' id='negative'>Paragraph.</p>
+ <p tabindex='0' id='zero'>Paragraph.</p>
+ <p tabindex='1' id='positive'>Paragraph.</p>
+ <!--valid-lang-->
+ <p lang='gibberish-US' id='valid-langfail1'>Not English</p>
+<p xml:lang='gibberish-US' id='valid-langfail2'>Not English</p>
+<p xml:lang='en-US' lang='gibberish-US' id='valid-langfail3'>Mix</p>
+<p lang=' ' id='fail4'>English</p>
+<!--empty-table-header-->
+<table>
+  <tr> <th></th> </tr>
+  <tr> <td>Hello world</td> </tr>
+</table>
+<MyImage isAccessible />
+<li id='fail1' role='presentation' aria-label='My Heading'>Hello</li>
+<div role='none' aria-roledescription='my none' id='fail4'></div>
+<p role='text' id='fail4'><button>Hello</button></p>
+<h1 id='fail1'></h1>
+<dl id='divdl'>
+<div>This shouldn't be here.</div>
+</dl>
+<div id='dialogfail1' role='dialog'></div>
+​<div role="checkbox"></div>
+<input type='image' id='fail-input-image-invalid-role' role='doc-afterword' />
+<map>
+<area href='#' id='fail' />
+</map>
+<div id='monkeys'>Bananas</div>
+<aria />
+<p aria-roledescription="my paragraph" id="fail1">paragraph</p>
+<div role='text' id='fail1'></div> Still an <a href='#'>interactive link</a> because of the author error.</div>
+</html>
